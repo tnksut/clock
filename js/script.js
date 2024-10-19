@@ -46,3 +46,34 @@ TOGGLE_CFORMAT.addEventListener('click', () => {
         TOGGLE_CFORMAT.textContent = '▶Display Format';
     }
 });
+
+const sideBar = document.getElementById('sidebarMenu');
+checkbox.addEventListener('change', () => {
+    if(checkbox.checked){
+        sideBar.style.transform = 'translateX(0)';
+    }else{
+        sideBar.style.transform = 'translateX(-250px)';
+    }
+})
+
+const toggleHeader = document.getElementById('toggleHeaderVisible');
+const scrollTarget = document.getElementById('header');
+const oSbMlabel = document.getElementById('oSbMlabel');
+const maininnerBackground = document.getElementById('maininner');
+let isHeaderVisible = true;
+toggleHeader.addEventListener('click', () => {
+    if(isHeaderVisible){
+        toggleHeader.classList.add('rotated');
+        scrollTarget.classList.add('slide-up');
+        // checkbox.classList.add('slide-up');
+        // oSbMlabel.classList.add('slide-up');
+        maininnerBackground.classList.add('backgroundSlideUpFixed');
+    }else{
+        toggleHeader.classList.remove('rotated');
+        scrollTarget.classList.remove('slide-up');
+        // checkbox.classList.remove('slide-up');
+        // oSbMlabel.classList.remove('slide-up');
+        maininnerBackground.classList.remove('backgroundSlideUpFixed');
+    }
+    isHeaderVisible = !isHeaderVisible;
+});
