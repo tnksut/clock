@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="header">
         <h1><a href="https://tnksut.github.io/" style="text-decoration: none;color: black;">いろいろ</a></h1>
     </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
-    <label for="openSidebarMenu" class="sidebarIconToggle">
+    <label for="openSidebarMenu" class="sidebarIconToggle" id="oSbMlabel">
         <div class="spinner diagonal part-1"></div>
         <div class="spinner horizontal"></div>
         <div class="spinner diagonal part-2"></div>
     </label>
+    <div class="arrow toggleHeaderVisible" id="toggleHeaderVisible">&#8593;</div>
     <div id="sidebarMenu">
         <ul class="sidebarMenuInner" style="user-select: none">
             <li id="setting-toggle">setting</li>
@@ -26,6 +27,7 @@
                 <li id="format-1" onclick="format1();">YYYY/MM/DD,HH-MM-SS</li>
                 <li id="format-2" onclick="format2();">YYYY/MM/DD,HH:MM</li>
             </div>
+            <li id="popupWindow">POPUPWINDOW</li>
         </ul>
     </div>
     <div id="toggle-item-settingMenu" class="setting">
